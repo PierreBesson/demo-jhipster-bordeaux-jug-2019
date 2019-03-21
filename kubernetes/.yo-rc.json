@@ -1,0 +1,18 @@
+{
+  "generator-jhipster": {
+    "appsFolders": [
+      "crm",
+      "store"
+    ],
+    "directoryPath": "../",
+    "serviceDiscoveryType": "eureka",
+    "jwtSecretKey": "N2RhMDJkMDZhZTFkM2ZiZjIyNGQ4ZjJjMDUxZTAxMTI2NDJkZjgyMGMzN2VjMGFhZjAxMzE4ZjRiZjYwYmEzMTg0YWQ4Y2E4YWMyNmNjMTA5ZDA5NDRkYTA4ZGNiYmU2OGRiZg==",
+    "dockerRepositoryName": "pbesson",
+    "dockerPushCommand": "docker push",
+    "kubernetesNamespace": "jhipster",
+    "kubernetesServiceType": "LoadBalancer",
+    "monitoring": "no",
+    "istio": "no",
+    "istioRoute": false
+  }
+}

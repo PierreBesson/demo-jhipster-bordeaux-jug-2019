@@ -10,16 +10,25 @@ Start the all apps locally with:
     - `./mvnw` for the microservices
     - `docker-compose -f accountancy/src/main/docker/mongodb.yml up -d` (required for MongoDB)
 
-- Package for prod and build the docker image: `./mvnw package -Pprod,zipkin jib:dockerBuild` (the zipkin profile is necessary to enable zipkin)
+- To package the apps as jars and build the docker image: `./mvnw package -Pprod,zipkin jib:dockerBuild` (the zipkin profile is necessary to enable zipkin)
 
 ## Deployment to a single host with docker-compose
 
-- `cd docker && docker-compose up -d`
+For convenience, I have already pushed the images to the docker hub (pbesson/store, pbesson/accountancy and pbesson/crm).
 
+- `cd docker && docker-compose up -d`
 
 ## Deployment to a Kubernetes cluster
 
-For convenience, I have already pushed the images to the docker hub (pbesson/store, pbesson/accountancy and pbesson/crm).
+If you don't have a kubernetes cluster, the easiest and fastest way to test is by using Kind (Kubernetes IN Docker). See[https://kind.sigs.k8s.io/docs/user/quick-start/](https://kind.sigs.k8s.io/docs/user/quick-start/)
+
+
+Simply run : `kubernetes/kubectl-apply.sh` to create the resources in the `jhipster` namespace of your kubernetes cluster.
+Then:
+- Switch to the jhipster namespace: `kubectl config set-context $(kubectl config current-context) --namespace=jhipster`
+- See the available Kubernetes services: `kubectl get svc`
+- Scale the number of replica of the crm service by editing the `replica` yaml field and reapplying the conf.
+
 
 # Links
 
@@ -28,7 +37,6 @@ For convenience, I have already pushed the images to the docker hub (pbesson/sto
 - Registry: [http://localhost:8761/#/](http://localhost:8761/#/)
 - Registry API (per instance access): [http://localhost:8761/#/docs]- (http://localhost:8761/#/docs)
 - Registry metrics: [http://localhost:8761/#/jhi-metrics](http://localhost:8761/#/jhi-metrics)
-
 
 - Kibana: [http://localhost:5601](http://localhost:5601)
 - Logtrail: [http://localhost:5601/app/logtrail#/?q=-logger_name:+"metrics"](http://localhost:5601/app/logtrail#/?q=-logger_name:+"metrics")
