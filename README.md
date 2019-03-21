@@ -23,7 +23,7 @@ For convenience, I have already pushed the images to the docker hub (pbesson/sto
 
 # Links
 
-- Gateway : [http://localhost:8080/#/gateway](http://localhost:8080/#/gateway)
+- Gateway : [http://localhost:8080/](http://localhost:8080/)
 - Gateway API (load-balanced): [http://localhost:8080/#/docs](http://localhost:8080/#/docs)
 - Registry: [http://localhost:8761/#/](http://localhost:8761/#/)
 - Registry API (per instance access): [http://localhost:8761/#/docs]- (http://localhost:8761/#/docs)

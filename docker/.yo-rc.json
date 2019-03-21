@@ -1,0 +1,18 @@
+{
+  "generator-jhipster": {
+    "appsFolders": [
+      "accountancy",
+      "crm",
+      "store"
+    ],
+    "directoryPath": "../",
+    "gatewayType": "zuul",
+    "clusteredDbApps": [],
+    "monitoring": "elk",
+    "consoleOptions": [
+      "zipkin"
+    ],
+    "serviceDiscoveryType": "eureka",
+    "jwtSecretKey": "ZTZlNWE2MGExNDIxN2Y0NGY2MDg5ODllZmY2YTJkNjIzNDZlMmE3MDA3MWQ5OWY2YWJkMDhiMjIzNzk0YWU2MGM2M2E4ZmFhYjdlYzZlYTEzMjU1ZWQ0OGMwZGM2MmE1NDg5Zg=="
+  }
+}
